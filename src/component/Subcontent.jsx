@@ -7,7 +7,7 @@ class Subcontent extends React.Component {
         <section class="text-center container my-5">
             <div class="page-section border-top">
                 <div class="col">
-                    <span class="fa-stack fa-6x">
+                    <span class="fa-6x">
                         <i class="fa-brands fa-github"></i>
                     </span>
                     <h4 class="my-0">github</h4>

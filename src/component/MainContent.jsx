@@ -1,9 +1,20 @@
 import React from 'react'
 import profileImage from "../Images/myImage.jpg";
+import Detail from './Detail';
 
 
 class MainContent extends React.Component {
-    
+
+    constructor(props) {
+        super(props);
+        this.state = {show: false};
+    }
+
+    //各ポートフォリオがクリックされたとき詳細を表示
+    handleClick () { 
+        this.setState({show: true});
+    }
+
     render () {
        return (
         <div>
@@ -32,11 +43,15 @@ class MainContent extends React.Component {
                     </div>
                 </section>
             </section>
-            
+
+          
+            {/* 詳細表示コンポーネント */}
+            <Detail show={this.state.show}/>
+
             <div class="container">
                 <div class="row text-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col-md-4 shadow-sm">
-                        <span class="fa-stack fa-6x">
+                    <div class="col-md-4 shadow-sm" onClick={()=>{this.handleClick()}}>
+                        <span class="fa-6x">
                             <i class="fa-regular fa-calendar-days"></i>
                         </span>
                         <h4 class="my-3">予定共有アプリ</h4>
@@ -46,17 +61,17 @@ class MainContent extends React.Component {
                         </p>
                     </div>
                     <div class="col-md-4 shadow-sm">
-                        <span class="fa-stack fa-6x">
+                        <span class="fa-6x">
                             <i class="fa-regular fa-comments"></i>
                         </span>
                         <h4 class="my-3">チャット型掲示板</h4>
                         <p class="text-muted">
                             非同期でやりとりが行えるチャット型の掲示板です。<br></br>
-                            vue.jsを用いた非同期通信を学ぶために作成しました。Dockerを使用して開発を行いました。
+                            Vue.jsを用いた非同期通信を学ぶために作成しました。Dockerを使用して開発を行いました。
                         </p>
                     </div>
                     <div class="col-md-4 shadow-sm">
-                        <span class="fa-stack fa-6x">
+                        <span class="fa-6x">
                             <i class="fa-solid fa-gamepad"></i>
                         </span>
                         <h4 class="my-3">動物お世話アプリ</h4>
@@ -67,7 +82,7 @@ class MainContent extends React.Component {
                     </div>
 
                     <div class="col-md-4 shadow-sm">
-                        <span class="fa-stack fa-6x">
+                        <span class="fa-6x">
                             <i class="fa-solid fa-laptop-code"></i>
                         </span>
                         <h4 class="my-3">ポートフォリオ一覧</h4>
