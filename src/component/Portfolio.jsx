@@ -25,8 +25,8 @@ class Portfolio extends React.Component {
        if(this.state.show){
 
         modal = (
-            <div className="overlay">
-                <div class="card mb-4 rounded-3 shadow-sm ">
+            <div className="overlay fadeIn">
+                <div class="card mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3 text-center">
                         <h4 class="my-0 fw-normal text-muted">{this.props.name}</h4>
                     </div>
