@@ -1,6 +1,6 @@
 import React from 'react'
 import profileImage from "../Images/myImage.jpg";
-import Detail from './Detail';
+import Portfolio from './Portfolio';
 
 
 class MainContent extends React.Component {
@@ -16,6 +16,52 @@ class MainContent extends React.Component {
     }
 
     render () {
+       const portfolioList = [
+           {name: "予定共有アイテム",
+            shortSent: (<p class="text-muted justify">簡単にグループを作成でき、そのグループ内で自分のアカウントを作成して予定を入力、閲覧することができます。<br></br>基本的なMVCについて理解を深めるために作成しました。</p>),
+            icon: "fa-regular fa-calendar-days",
+            frontend: "　Vue.js, bootstrap",
+            backend: "　Laravel",
+            other: "　heroku使用",
+            explanation: "　MVCモデルについて理解を深めることを意識してLarvelを使用し作成しました。",
+            github: "https://github.com/Hasegawa-Akito/scheduler",
+            appURL: "https://scheduler-management-app.herokuapp.com/roomlogin",
+            },
+            {
+                name: "チャット型掲示板",
+                shortSent: (<p class="text-muted justify">非同期でやりとりが行えるチャット型の掲示板です。<br></br>Vue.jsを用いた非同期通信を学ぶために作成しました。Dockerを使用して開発を行いました。</p>),
+                icon: "fa-regular fa-comments",
+                frontend: "　Vue.js, bootstrap",
+                backend: "　Laravel",
+                other: "　Docker, AWS使用",
+                explanation: "　Axiosの非同期通信を用いたチャットイメージの掲示板です。Dockerを用いての開発やAWSの無料枠を用いてのデプロイを行いました。",
+                github: "https://github.com/Hasegawa-Akito/docker-bulletin-board",
+                appURL: "http://54.248.47.219/home",
+            },
+            {
+                name: "動物お世話アプリ",
+                shortSent: (<p class="text-muted justify">一緒に開発をしたペットロボットと連携してアプリ上でペットのお世話できます。<br></br>Unityを使用しiPhoneアプリを開発しました。</p>),
+                icon: "fa-solid fa-gamepad",
+                frontend: "　",
+                backend: "　",
+                other: "　Unity/C#を用いたiosアプリ開発",
+                explanation: "　名古屋市主催の名古屋ブーストにてチームで開発を行なったソリューションです。アプリURLはソリューション説明のためのHPのURLとなっています。こちらのHP自体は作成していません",
+                github: "#",
+                appURL: "#",
+            },
+            {
+                name: "ポートフォリオ一覧",
+                shortSent: (<p class="text-muted justify">本サイトです。自分が作成したポートフォリオを紹介するwebサイトです。</p>),
+                icon: "fa-solid fa-laptop-code",
+                frontend: "　React, bootstrap",
+                backend: "　",
+                other: "　",
+                explanation: "　本サイトになります。Vue.jsとの比較としてReactを用いて作成しました。　",
+                github: "https://github.com/Hasegawa-Akito/portfolio_list_react",
+                appURL: "https://hasegawa-akito.github.io/portfolio_list_react/",
+            }
+
+       ];
        return (
         <div>
             <section class="text-center container">
@@ -44,52 +90,26 @@ class MainContent extends React.Component {
                 </section>
             </section>
 
-          
-            {/* 詳細表示コンポーネント */}
-            <Detail show={this.state.show}/>
 
             <div class="container">
                 <div class="row text-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col-md-4 shadow-sm" onClick={()=>{this.handleClick()}}>
-                        <span class="fa-6x">
-                            <i class="fa-regular fa-calendar-days"></i>
-                        </span>
-                        <h4 class="my-3">予定共有アプリ</h4>
-                        <p class="text-muted">
-                            簡単にグループを作成でき、そのグループ内で自分のアカウントを作成して予定を入力、閲覧することができます。<br></br>
-                            基本的なMVCについて理解を深めるために作成しました。
-                        </p>
-                    </div>
-                    <div class="col-md-4 shadow-sm">
-                        <span class="fa-6x">
-                            <i class="fa-regular fa-comments"></i>
-                        </span>
-                        <h4 class="my-3">チャット型掲示板</h4>
-                        <p class="text-muted">
-                            非同期でやりとりが行えるチャット型の掲示板です。<br></br>
-                            Vue.jsを用いた非同期通信を学ぶために作成しました。Dockerを使用して開発を行いました。
-                        </p>
-                    </div>
-                    <div class="col-md-4 shadow-sm">
-                        <span class="fa-6x">
-                            <i class="fa-solid fa-gamepad"></i>
-                        </span>
-                        <h4 class="my-3">動物お世話アプリ</h4>
-                        <p class="text-muted">
-                            一緒に開発をしたペットロボットと連携してアプリ上でペットのお世話できます。
-                            Unityを使用しiPhoneアプリを開発しました。
-                        </p>
-                    </div>
 
-                    <div class="col-md-4 shadow-sm">
-                        <span class="fa-6x">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </span>
-                        <h4 class="my-3">ポートフォリオ一覧</h4>
-                        <p class="text-muted">
-                            自分が作成したポートフォリオを紹介するwebサイトです。
-                        </p>
-                    </div>
+                    {/* portfolioの情報を順に取り出す */}
+                    {portfolioList.map((portfolioItem) => {
+                        return (
+                            <Portfolio
+                                name={portfolioItem.name}
+                                shortSent={portfolioItem.shortSent}
+                                icon={portfolioItem.icon}
+                                frontend={portfolioItem.frontend}
+                                backend={portfolioItem.backend}
+                                other={portfolioItem.other}
+                                explanation={portfolioItem.explanation}
+                                github={portfolioItem.github}
+                                appURL={portfolioItem.appURL}
+                            />
+                        );
+                    })}
                     
                     
                 </div>
