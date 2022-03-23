@@ -17,7 +17,7 @@ class MainContent extends React.Component {
 
     render () {
        const portfolioList = [
-           {name: "予定共有アイテム",
+           {name: "予定共有アプリ",
             shortSent: (<p class="text-muted justify">簡単にグループを作成でき、そのグループ内で自分のアカウントを作成して予定を入力、閲覧することができます。<br></br>基本的なMVCについて理解を深めるために作成しました。</p>),
             icon: "fa-regular fa-calendar-days",
             frontend: "　Vue.js, bootstrap",
@@ -47,7 +47,7 @@ class MainContent extends React.Component {
                 other: "　Unity/C#を用いたiosアプリ開発",
                 explanation: "　名古屋市主催の名古屋ブーストにてチームで開発を行なったソリューションです。アプリURLはソリューション説明のためのHPのURLとなっています。こちらのHP自体は作成していません",
                 github: "#",
-                appURL: "#",
+                appURL: "https://famimal.nob-log.com/famimal/",
             },
             {
                 name: "ポートフォリオ一覧",

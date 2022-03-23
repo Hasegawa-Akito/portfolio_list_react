@@ -50,7 +50,7 @@ class Portfolio extends React.Component {
        }
 
        return (
-        <div class="col-md-4 shadow-sm" className="portfolio">
+        <div class="col-md-4" className="portfolio">
             {modal}
             <div  onClick={()=>{this.clickPortfolio()}}>
                 <span class="fa-6x">
