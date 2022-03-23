@@ -28,7 +28,7 @@ class Portfolio extends React.Component {
             <div className="overlay">
                 <div class="card mb-4 rounded-3 shadow-sm ">
                     <div class="card-header py-3 text-center">
-                        <h4 class="my-0 fw-normal">チャット型掲示板</h4>
+                        <h4 class="my-0 fw-normal text-muted">{this.props.name}</h4>
                     </div>
                     <div class="card-body" className="modalContent">
                         <ul className="list-unstyled mt-4 detail">
@@ -50,14 +50,15 @@ class Portfolio extends React.Component {
        }
 
        return (
-        <div class="col-md-4 shadow-sm">
+        <div class="col-md-4 shadow-sm" className="portfolio">
             {modal}
-            <div onClick={()=>{this.clickPortfolio()}}>
+            <div  onClick={()=>{this.clickPortfolio()}}>
                 <span class="fa-6x">
                     <i class={this.props.icon}></i>
                 </span>
-                <h4 class="my-3">{this.props.name}</h4>
-                
+                <h4 class="my-3 name">{this.props.name}</h4>
+
+                {/* 短い説明 */}
                 {this.props.shortSent}
             </div>
         </div>
