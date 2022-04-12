@@ -19,12 +19,12 @@ class MainContent extends React.Component {
        const portfolioList = [
             {
                 name: "ありがとう可視化アプリ",
-                shortSent: (<p class="text-muted justify">ありがとうをハートで表現し可視化することができます。</p>),
+                shortSent: (<p class="text-muted justify">ありがとうをハートで表現し可視化することができます。リアルタイムでの他デバイスとのやりとりが可能です。</p>),
                 icon: "fa-regular fa-heart",
                 frontend: "　React, bootstrap",
                 backend: "　node.js",
                 other: "　",
-                explanation: "　ありがとうを含むメッセージの投稿でハートを大きくできます。socket.ioを用いることでリアルタイムでのメッセージやハートの変化を確認できます。",
+                explanation: "　ありがとうを含むメッセージの投稿でハートを大きくできます。socket.ioを用いているのでリアルタイムでのメッセージやハートの変化を確認できます。",
                 github: "https://github.com/Hasegawa-Akito/node_heartApp",
                 appURL: "https://thanks-app-node.herokuapp.com/heart",
             },
@@ -47,7 +47,7 @@ class MainContent extends React.Component {
                 backend: "　",
                 other: "　Unity/C#を用いたiosアプリ開発",
                 explanation: "　名古屋市主催の名古屋ブーストにてチームで開発を行なったソリューションです。アプリURLはソリューション説明のためのHPのURLとなっています。こちらのHP自体は作成していません",
-                github: "#",
+                github: "https://github.com/Hasegawa-Akito/famimal-unity-cs",
                 appURL: "https://famimal.nob-log.com/famimal/",
             },
             {
