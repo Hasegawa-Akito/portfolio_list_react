@@ -18,11 +18,22 @@ class MainContent extends React.Component {
     render () {
        const portfolioList = [
             {
+                name: "プロ野球選手BirthDay api",
+                shortSent: (<p class="text-muted justify">その日が誕生日のプロ野球選手を教えてくれるapiになります。dockerを用いてnode.jsで開発しました。</p>),
+                icon: "fa-solid fa-baseball",
+                frontend: "　",
+                backend: "　node.js",
+                other: "　Docker",
+                explanation: "　その日が誕生日であるプロ野球選手を教えてくれるapiになります。dockerを用いて開発を行いました。プロ野球選手の情報はスクレイピングを用いて収集しました。",
+                github: "https://github.com/Hasegawa-Akito/node-docker-api",
+                appURL: "https://baseball-birth.herokuapp.com/",
+            },
+            {
                 name: "ありがとう可視化アプリ",
                 shortSent: (<p class="text-muted justify">ありがとうをハートで表現し可視化することができます。リアルタイムでの他デバイスとのやりとりが可能です。</p>),
                 icon: "fa-regular fa-heart",
                 frontend: "　React, bootstrap",
-                backend: "　node.js",
+                backend: "　node.js/express",
                 other: "　",
                 explanation: "　ありがとうを含むメッセージの投稿でハートを大きくできます。socket.ioを用いているのでリアルタイムでのメッセージやハートの変化を確認できます。",
                 github: "https://github.com/Hasegawa-Akito/node_heartApp",
